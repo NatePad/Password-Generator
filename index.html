@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous" />
+
+  <title>Random Password Generator</title>
+</head>
+
+<body onload="init();">
+
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <div class="row justify-content-md-center">
+        <div class="col-auto">
+          <h1 class="display-4">Random Password Generator</h1>
+          <p class="lead">Use this with a password manager such as <a href="https://www.lastpass.com/" target="_blank"
+              rel="noreferrer noopener">LastPass</a> or another of your choosing.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row justify-content-md-center">
+      <div class="col-auto mb-3">
+        <h5 class="mb-3">What would you like to include in your password?</h5>
+
+        <form>
+          <!-- Lowercase Letters Checkbox -->
+          <div class="form-group form-check">
+            <input type="checkbox" class="form-check-input" id="lowercase-checkbox" name="lowercase-checkbox" checked />
+            <label class="form-check-label" for="lowercase-checkbox">Lowercase Letters</label>
+          </div>
+
+          <!-- Capital Letters Checkbox -->
+          <div class="form-group form-check">
+            <input type="checkbox" class="form-check-input" id="capital-checkbox" name="capital-checkbox" checked />
+            <label class="form-check-label" for="capital-checkbox">Capital Letters</label>
+          </div>
+
+          <!-- Numbers Checkbox -->
+          <div class="form-group form-check">
+            <input type="checkbox" class="form-check-input" id="number-checkbox" name="number-checkbox" checked />
+            <label class="form-check-label" for="number-checkbox">Numbers</label>
+          </div>
+
+          <!-- Special Characters Checkbox -->
+          <div class="form-group form-check">
+            <input type="checkbox" class="form-check-input" id="spec-char-checkbox" name="spec-char-checkbox" checked />
+            <label class="form-check-label" for="spec-char-checkbox">Special Characters</label>
+          </div>
+
+          <!-- Password Length Input -->
+          <div class="form-group">
+            <label for="length-input">Password length (from 8 to 128 characters):</label>
+            <input type="number" class="form-control" id="length-input" name="length-input" min="8" max="128" value="16" />
+          </div>
+
+          <!-- Generate Password Button -->
+          <div class="form-group">
+            <button type="button" id="generate-btn" class="btn btn-lg btn-primary w-100">Generate Password</button>
+          </div>
+
+          <!-- New Password Input -->
+          <div class="form-group">
+            <label for="new-password-textbox">Your new password is:</label>
+            <input type="text" class="form-control text-monospace" id="new-password-textbox" name="new-password-textbox" />
+            <small class="form-text text-monospace">For reference - I:i, L:l, 1:one, O:o, 0:zero</small>
+          </div>
+
+          <div class="form-group">
+            <button type="button" id="copy-btn" class="btn btn-lg btn-primary w-100">Copy to Clipboard</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- jQuery and Bootstrap Bundle (includes Popper) -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+    crossorigin="anonymous"></script>
+
+  <!-- Custom Scripts -->
+  <!-- <script src="./scripts/lvl-1-array-script.js"></script> -->
+  <!-- <script src="./scripts/lvl-1-string-script.js"></script> -->
+  <!-- <script src="./scripts/lvl-2-organized.js"></script> -->
+  <!-- <script src="./scripts/lvl-3-array.js"></script> -->
+  <!-- <script src="./scripts/lvl-4-equal-chances.js"></script> -->
+  <!-- <script src="./scripts/lvl-5-object.js"></script> -->
+  <script src="./scripts/lvl-6-for-each.js"></script>
+  <!-- <script src="./scripts/lvl-6-with-arrays.js"></script> -->
+  <!-- <script src="./scripts/lvl-7-function-demo.js"></script> -->
+</body>
+
+</html>
